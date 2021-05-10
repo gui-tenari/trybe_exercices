@@ -1,5 +1,8 @@
 - Unix
 - Bash
 - Git
-HTML
-CSS
+- JavaScript
+- CSS+
+- HTML
+- CSS
+
