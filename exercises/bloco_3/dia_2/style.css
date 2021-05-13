@@ -1,0 +1,10 @@
+<style>
+body {font-size: 16px;}
+h1 {font-size: 65px; color: orange;font-family: sans-serif;}
+.estilos {background-color: aqua;} 
+p {font-weight: 200px; font-size: 3em;} 
+ul {line-height: 48px; text-align:center; font-style: oblique;}
+#Amarelo {background-color:yellow; font-style;}
+#Vermelho {background-color:red}
+#Marrom {background-color:brown; text-decoration: line-through;}
+</style>
