@@ -6,12 +6,24 @@ ul {
     color: red;
     text-align: center;
     list-style-type: none;
+    list-style: none;
+
 }
 li:hover {
     background-color: turquoise;
+    text-decoration: underline;
+}
+a {
+    text-decoration: none;
+    color: purple;
+    font-weight: bold;
 }
 li:active {
-    color:yellow
+    font-family: "Times New Roman";
+    font-style: italic;}
+
+a:visited {
+    
 }
 
 
