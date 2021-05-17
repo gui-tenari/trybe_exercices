@@ -1,0 +1,48 @@
+h1 {
+    text-align: center;
+  }
+
+section {
+}
+
+section ul{
+    list-style-type: none;
+  }
+
+  .first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    display: block;
+    margin-left: 40%;
+  }
+
+  .second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+    margin-left: 26%;
+  }
+
+  .third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+  }
+
+  main{
+    text-align: center;
+  }
+
+  main ul li{
+    list-style-type: none;
+    display: inline;
+  }
