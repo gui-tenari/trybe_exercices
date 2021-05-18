@@ -1,0 +1,77 @@
+body{
+    font-family: 'Arvo', sans-serif;
+    background-image: url(/imagens/11773.jpg);
+    background-size: 100%;
+}
+header{
+    border: 3px solid black;
+    border-radius: 25%;
+    background-color: #f1c9c2;
+    text-align: center
+}
+
+header ul{
+    margin-left:70px ;
+}
+
+header ul li {
+    display: inline-block;
+    padding-right: 150px;
+}
+header ul li a{
+    text-decoration: bold;
+    color: black;
+}
+
+a:hover {
+    color: rgb(247, 84, 165);
+    text-decoration: bold;
+}
+
+h2 {
+    text-align: center;
+    text-shadow: 10px 10px 20px #ffffff;
+}
+
+main {
+    border: 8px solid black;
+    border-radius: 10px;
+    display: inline-block
+    
+}
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+main img{
+    width: 250px;
+    top: -1px;
+    border-radius: 15px;
+    border: 10px solid pink;
+    position: relative;
+    margin-left: 15px;
+}
+
+main section {
+    background-color: white;
+    border: 3px solid black;
+    display: inline-block;
+    position: relative;
+    float: right;
+    right: 5%;
+
+}
+
+main table td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    position: ab;
+}
+
+#first{
+    display: block;
+    width: 400px;
+    background-color: red;
+}
