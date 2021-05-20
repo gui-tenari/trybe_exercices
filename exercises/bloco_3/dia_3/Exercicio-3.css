@@ -1,0 +1,41 @@
+h1, p {
+    text-align: center;
+}
+ul {
+    padding: 40px;
+    color: red;
+    text-align: center;
+    list-style-type: none;
+    list-style: none;
+
+}
+li:hover {
+    background-color: turquoise;
+    text-decoration: underline;
+}
+a {
+    text-decoration: none;
+    color: purple;
+    font-weight: bold;
+}
+li:active {
+    font-family: "Times New Roman";
+    font-style: italic;}
+
+a:visited {
+    
+}
+
+
+
+
+
+
+
+<!-- EXERCÍCIOS
+Adicione uma lista ordenada dos 3 melhores sites que você conhece.
+Crie um arquivo no mesmo diretório e nomeie-o de 'style.css'.
+Nesse arquivo .css, adicione os estilos para que:
+1 O texto das tags 'h1' e 'p' estejam centralizados.
+2 A cor de fundo da sua lista mude quando o cursor estiver sobre o item.
+3 A fonte do item mude quando ele for clicado.
