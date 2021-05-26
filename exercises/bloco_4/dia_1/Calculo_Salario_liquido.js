@@ -6,3 +6,4 @@ let faixa3 = 5189.82;
 let aliquotaMax = 570.88;
 
 function INSS ()
+
