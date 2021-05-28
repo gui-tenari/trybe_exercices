@@ -76,6 +76,54 @@
       // 4
       let paragrafo = document.createElement('p');
       divFilha.appendChild(paragrafo);
+
+      // 5
+      let leftContent = document.createElement('div');
+      leftContent.className = 'left-content';
+      div1.appendChild(leftContent);
+
+      // 6
+      let rightContent = document.createElement('div');
+      rightContent.className = 'right-content';
+      div1.appendChild(rightContent);
+
+      // 7
+      let image = document.createElement('img');
+      image.src = 'https://picsum.photos/200';
+      image.className = 'small-image'
+      leftContent.appendChild(image);
+
+      // 8
+      let lista = document.createElement('ul');
+      rightContent.appendChild(lista)
+
+      function listItem(string,parent) {
+        let item = document.createElement('li');
+        item.innerText = string;
+        parent.appendChild(item)
+      }
+
+      listItem ('um', lista);
+      listItem ('dois', lista);
+      listItem ('tres', lista);
+      listItem ('quatro', lista);
+      listItem ('cinco', lista);
+      listItem ('seis', lista);
+      listItem ('sete', lista);
+      listItem ('oito', lista);
+      listItem ('nove', lista);
+      listItem ('dez', lista);
+
+      // 9
+      function createItens (tag, parent) {
+        let element = document.createElement(tag);
+        parent.appendChild(element)
+      }
+
+      createItens ('h3', div1);
+      createItens ('h3', div1);
+      createItens ('h3', div1);
+
       </script>
       </body>
 </html>
