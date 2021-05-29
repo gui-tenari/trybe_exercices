@@ -55,12 +55,65 @@ function AddFiedays(array) {
 (createDays(containerDays));
 
 // 2
-function createButton (string) {
+function createButton (string, father, identação) {
     let button = document.createElement('button');
-    let divPai = document.getElementsByClassName('buttons-container');
-    button.className = 'btn-holiday';
+    let divPai = document.getElementsByClassName(father);
+    button.id = identação;
     divPai[0].appendChild(button);
     button.innerText = string;
 }
 
-createButton ('Feriados!')
+createButton ('Feriados!', 'buttons-container','btn-holiday')
+
+// 3 
+let clickedHoliday = false;
+document.getElementById('btn-holiday').addEventListener('click',  function () {
+    let holidays = document.getElementsByClassName('holiday');
+    for (let holiday of holidays) {
+            if (clickedHoliday) {
+            holiday.style.backgroundColor = 'rgb(238,238,238)';
+        } else {
+            holiday.style.backgroundColor = 'red'
+        }
+    }
+    clickedHoliday = !(clickedHoliday)       
+    console.log(clickedHoliday) 
+});
+
+// 4
+createButton ('Sexta-feira', 'buttons-container', 'btn-friday')
+
+// 5
+let clickedFriday = false
+document.getElementById('btn-friday').addEventListener('click',  function () {
+    let fridays = document.getElementsByClassName('friday');
+    for (let friday of fridays) {
+            if (clickedFriday) {
+            friday.style.backgroundColor = 'rgb(238,238,238)';
+        } else {
+            friday.style.backgroundColor = 'blue'
+        }
+    }
+    clickedFriday = !(clickedFriday)       
+    console.log(clickedFriday) 
+});
+
+// 6
+let days = document.getElementsByClassName('day');
+function zoomEffect (event) {
+    event.target.style.fontSize = '30px';
+}
+function zoomBack (event) {
+    event.target.style.fontSize = '20px';
+}
+for (let day of days) {
+day.addEventListener('mouseover', zoomEffect)
+}
+
+for (let day of days) {
+    day.addEventListener('mouseout', zoomBack)
+    }
+
+    // 7
+
+    
