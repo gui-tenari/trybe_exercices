@@ -115,5 +115,10 @@ for (let day of days) {
     }
 
     // 7
-
-    
+    function createTask (tarefa) {
+        let task = document.createElement('span');
+        task.innerText = tarefa
+        let divPai = document.getElementsByClassName('my-tasks')
+        divPai[0].appendChild(task);
+    }
+    createTask('Cozinhar')
