@@ -54,5 +54,13 @@ function AddFiedays(array) {
    
 (createDays(containerDays));
 
+// 2
+function createButton (string) {
+    let button = document.createElement('button');
+    let divPai = document.getElementsByClassName('buttons-container');
+    button.className = 'btn-holiday';
+    divPai[0].appendChild(button);
+    button.innerText = string;
+}
 
-
+createButton ('Feriados!')
