@@ -95,7 +95,6 @@ document.getElementById('btn-friday').addEventListener('click',  function () {
         }
     }
     clickedFriday = !(clickedFriday)       
-    console.log(clickedFriday) 
 });
 
 // 6
@@ -114,11 +113,39 @@ for (let day of days) {
     day.addEventListener('mouseout', zoomBack)
     }
 
-    // 7
-    function createTask (tarefa) {
-        let task = document.createElement('span');
-        task.innerText = tarefa
-        let divPai = document.getElementsByClassName('my-tasks')
-        divPai[0].appendChild(task);
+// 7
+let myTasks = document.getElementsByClassName('my-tasks')
+function createTask (tarefa) {
+    let task = document.createElement('span');
+    task.innerText = tarefa
+    myTasks[0].appendChild(task);
+}
+createTask('Cozinhar')
+
+// 8
+function changeColor (color) {
+    let myTask = document.createElement('div');
+    myTask.classList.add('task');
+    myTasks[0].appendChild(myTask);
+    myTask.style.backgroundColor = color
+}
+changeColor('green');
+
+// 9
+let taskList = document.getElementsByClassName('task')
+let taskClicked = false;
+function changeClass (event) {
+    for (let task of taskList) {
+        if(taskClicked) {
+            task.classList.remove('selected')
+        } else {
+            task.classList.add('selected')
+        }
     }
-    createTask('Cozinhar')
+    taskClicked = !(taskClicked)
+    console.log(taskClicked)
+}
+
+for (let task of taskList)
+task.addEventListener('click', changeClass)
+
