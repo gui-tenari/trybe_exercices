@@ -172,3 +172,27 @@ function selectedDay(event) {
 for (let day of days) {
     day.addEventListener('click', selectedDay)
 }
+
+// Bonus
+let button = document.getElementById('btn-add');
+let caixaTexto = document.getElementById('task-input')
+let lista = document.getElementsByClassName('task-list');
+function insertText () {
+    let text = document.createElement('li');
+    text.innerText = caixaTexto.value;
+    if (text.innerText.length > 1) {
+    lista[0].appendChild(text)
+    document.getElementById('task-input').value = ''
+    } else {
+        alert('Texto inválido')
+    }
+}
+function enterRecognizer (event) {
+    let key = event.keyCode
+    if(key == 13) {
+        insertText();
+    }
+}
+
+caixaTexto.addEventListener('keydown', enterRecognizer)
+button.addEventListener('click', insertText)
