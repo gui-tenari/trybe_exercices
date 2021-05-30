@@ -115,37 +115,60 @@ for (let day of days) {
 
 // 7
 let myTasks = document.getElementsByClassName('my-tasks')
-function createTask (tarefa) {
+function createTask (tarefa, color) {
     let task = document.createElement('span');
-    task.innerText = tarefa
+    task.innerText = tarefa;
     myTasks[0].appendChild(task);
-}
-createTask('Cozinhar')
+    addColor(color)
+    }
+
+createTask('Cozinhar', 'green');
+createTask('Estudar', 'red')
+
+
+
 
 // 8
-function changeColor (color) {
+function addColor (color) {
     let myTask = document.createElement('div');
     myTask.classList.add('task');
     myTasks[0].appendChild(myTask);
     myTask.style.backgroundColor = color
 }
-changeColor('green');
 
 // 9
 let taskList = document.getElementsByClassName('task')
-let taskClicked = false;
+// let taskClicked = false;
 function changeClass (event) {
-    for (let task of taskList) {
-        if(taskClicked) {
-            task.classList.remove('selected')
-        } else {
-            task.classList.add('selected')
-        }
+    let element = event.target;
+    if (event.target.classList.contains('selected')){
+            event.target.classList.remove('selected')
+            element.style.border = '1px solid black'
+    } else {
+        event.target.classList.add('selected');
+        element.style.border = '3px solid black';
+        console.log(element)
     }
-    taskClicked = !(taskClicked)
-    console.log(taskClicked)
+    
 }
+
 
 for (let task of taskList)
 task.addEventListener('click', changeClass)
 
+// 10
+let taskSelected = document.getElementsByClassName('selected');
+function selectedDay(event) {
+    let colorTask = taskSelected[0].style.backgroundColor;
+    let text = event.target
+    let textColor = text.style.color;
+    if (textColor === colorTask) {
+        text.style.color = 'rgb(119,119,119)'
+    } else {
+        text.style.color = colorTask
+    }
+}
+
+for (let day of days) {
+    day.addEventListener('click', selectedDay)
+}
