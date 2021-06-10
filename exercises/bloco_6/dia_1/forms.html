@@ -8,59 +8,48 @@
 <body>
     <h1>Cadastro de Currículo</h1>
    
-    <form action="" method="GET">
+    <form action="" method="GET" id="personal-data">
+        <fieldset>
         <div class="content">
-            <fieldset>
                 <legend>Nome</legend>
                 <label for="input-name"></label>
                 <input type="text" name="full-name" id="name" maxlength="40" required>
-            </fieldset>
-        </div>
+            </div>
         <div class="content">
-            <fieldset>
                 <legend>Email</legend>
                 <label for="email"></label>
                 <input type="email" name="user-email" id="email" required>
-            </fieldset>
-        </div>
-        <div class="content">
-            <fieldset>
+            </div>
+            <div class="content">
                 <legend>CPF</legend>
                 <label for="cpf-number"></label>
                 <input type="number" name="cpf" id="cpf-number" maxlength="11"  required>
-            </fieldset>
-        </div>
-        <div class="content">
-            <fieldset>
+            </div>
+            <div class="content">
                 <legend>Endereço</legend>
                 <label for="user-adress"></label>
                 <input type="text" name="adress" id="user-adress" maxlength="200" required>
-            </fieldset>
-        </div>
-        <div class="content">
-            <fieldset>
+            </div>
+            <div class="content">
                 <legend>Cidade</legend>
                 <label for="user-city"></label>
                 <input type="text" name="city" id="user-city" maxlength="28" required>
-            </fieldset>
-        </div>
-        <div class="content">
-            <fieldset>
+            </div>
+            <div class="content">
                 <legend>Estado</legend>
                 <label for="user-state"></label>
                 <select name="state" id="user-state">
                 </select>
-            </fieldset>
-        </div>
-        <div class="content">
-            <fieldset>
+            </div>
+            <div class="content">
                 <legend>Tipo</legend>
                 <label for="house">Casa</label>
                 <input type="radio" name="type" id="house">
                 <label for="apartment">Apartamento</label>
                 <input type="radio" name="type" id="apartment">
-            </fieldset>
-        </div>
+            </div>
     </form>
+    <script src="script.js" type="module"></script>
+    <script src="states_of_Brasil.js" type="module"></script>
 </body>
 </html>
