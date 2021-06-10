@@ -1,0 +1,17 @@
+.content {
+    padding: 15px;
+}
+
+form {
+    border: 2px solid grey;
+    border-radius: 15px;
+    
+}
+
+.content fieldset {
+    border: none;
+}
+
+.content input[type = text] {
+   width: 50%;
+}
