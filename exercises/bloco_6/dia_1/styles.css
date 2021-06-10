@@ -20,3 +20,13 @@
 .content input[type = text] {
    width: 250px;
 }
+
+#user-state  {
+    width: 100px;
+}
+
+.btn {
+    display: inline;
+    margin: 15px;
+    text-align: center;
+}

@@ -8,8 +8,9 @@
 <body>
     <h1>Cadastro de Currículo</h1>
    
-    <form action="" method="GET" id="personal-data">
-        <fieldset>
+    <form action="" method="GET">
+        <fieldset id="personal-data">
+            <legend>Dados Pessoais</legend>
         <div class="content">
                 <legend>Nome</legend>
                 <label for="input-name"></label>
@@ -20,6 +21,7 @@
                 <label for="email"></label>
                 <input type="email" name="user-email" id="email" required>
             </div>
+            <!-- Numero Maximo Faltando -->
             <div class="content">
                 <legend>CPF</legend>
                 <label for="cpf-number"></label>
@@ -48,8 +50,31 @@
                 <label for="apartment">Apartamento</label>
                 <input type="radio" name="type" id="apartment">
             </div>
+        </fieldset>
+        <fieldset id="professional-data">
+            <legend>Ultimó emprego</legend>
+            <div id="content">
+                <legend>Resumo do currículo</legend>
+                <textarea name="resume" id="" cols="70" rows="10" maxlength="1000" placeholder="Escreva aqui um resumo do seu currículo em até 1000 caracteres" required></textarea>
+            </div>
+            <div id="content">
+                <legend>Cargo</legend>
+                <label for="office"></label>
+                <input type="text" name="cargo" id="office" maxlength="40" required>
+            </div>
+            <div id="content">
+                <legend>Descrição do cargo</legend>
+                <textarea name="description" id="office-description" cols="70" rows="10" placeholder="Descreva o cargo em até 500 caracteres" maxlength="500" required></textarea>
+            </div>
+            <div id="content">
+                <legend>Data de inicio</legend>
+                <label for="start-date"></label>
+                <input type="text" name="date" id="start-date" placeholder="ex: 26/07/2012"> 
+            </div>
+            <button class="btn" type="submit">Enviar</button>
+            <button class="btn" type="reset">Limpar todos os campos</button>
+        </fieldset>
     </form>
-    <script src="script.js" type="module"></script>
-    <script src="states_of_Brasil.js" type="module"></script>
+    <script src="script.js"></script>
 </body>
 </html>
