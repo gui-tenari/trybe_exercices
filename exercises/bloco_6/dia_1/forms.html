@@ -2,55 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <title>Forms</title>
 </head>
 <body>
-    <h1>Cadastro de Currículo</h1>
-   
-    <form action="" method="GET">
-        <fieldset id="personal-data">
-            <legend>Dados Pessoais</legend>
-        <div class="content">
-                <legend>Nome</legend>
-                <label for="input-name"></label>
-                <input type="text" name="full-name" id="name" maxlength="40" required>
+    <h1 class="display-3 text-center">Cadastro de Currículo</h1>
+    <form action="" method="GET" class="border border-dark container rounded">
+        <h4 class="text-muted display-6 text-center">Dados Pessoais</h4>
+        <div class="mb-3">
+            <label for="input-name" class="form-label">Nome</label>
+            <input class='form-control' type="text" name="full-name" id="name" maxlength="40" required>
             </div>
-        <div class="content">
-                <legend>Email</legend>
-                <label for="email"></label>
-                <input type="email" name="user-email" id="email" required>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="user-email" id="email" class='form-control'required>
             </div>
-            <!-- Numero Maximo Faltando -->
-            <div class="content">
-                <legend>CPF</legend>
-                <label for="cpf-number"></label>
-                <input type="number" name="cpf" id="cpf-number" maxlength="11"  required>
+        <!-- Numero Maximo Faltando -->
+        <div class="mb-3">
+            <label for="cpf-number" class="form-label">CPF</label>
+            <input type="text" name="cpf" id="cpf-number" maxlength="11" class='form-control'  required>
+        </div>
+        <div class="mb-3">
+            <label for="user-adress" class="form-label">Endereço</label>
+            <input type="text" name="adress" id="user-adress" maxlength="200" class='form-control' required>
+        </div>
+        <div class="mb-3">
+        <label for="user-city" class="form-label">Cidade</label>
+        <input type="text" name="city" id="user-city" maxlength="28" class='form-control' required>
+        </div>
+        <div class="mb-3">
+            <label for="user-state" class="form-label">Estado</label>
+            <select class="form-select form-select-sm" name="state" id="user-state">
+            </select>
+        </div>
+        <div class="mb-3">
+            <p class="form-label">Tipo</p>
+            <div class="form-check">
+                <input type="radio" name="type" id="house" class="form-check-input">
+                <label for="house" class="form-check-label">Casa</label>
             </div>
-            <div class="content">
-                <legend>Endereço</legend>
-                <label for="user-adress"></label>
-                <input type="text" name="adress" id="user-adress" maxlength="200" required>
+            <div class="form-check">
+                <input type="radio" name="type" id="apartment" class="form-check-input">
+                <label for="apartment" class="form-check-label">Apartamento</label>
             </div>
-            <div class="content">
-                <legend>Cidade</legend>
-                <label for="user-city"></label>
-                <input type="text" name="city" id="user-city" maxlength="28" required>
-            </div>
-            <div class="content">
-                <legend>Estado</legend>
-                <label for="user-state"></label>
-                <select name="state" id="user-state">
-                </select>
-            </div>
-            <div class="content">
-                <legend>Tipo</legend>
-                <label for="house">Casa</label>
-                <input type="radio" name="type" id="house">
-                <label for="apartment">Apartamento</label>
-                <input type="radio" name="type" id="apartment">
-            </div>
-        </fieldset>
+        </div>
         <fieldset id="professional-data">
             <legend>Ultimó emprego</legend>
             <div id="content">
@@ -71,8 +67,8 @@
                 <label for="start-date"></label>
                 <input type="text" name="date" id="start-date" placeholder="ex: 26/07/2012"> 
             </div>
-            <button class="btn" type="submit">Enviar</button>
-            <button class="btn" type="reset">Limpar todos os campos</button>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar todos os campos</button>
         </fieldset>
     </form>
     <script src="script.js"></script>
