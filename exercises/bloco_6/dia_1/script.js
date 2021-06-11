@@ -30,21 +30,21 @@ function checkDate () {
         alert('data inválida')
     }
     }
-function convertToArray (dateForm) {
-    const numbers = [];
-    let number = '';
-    for (let index = 0; index < dateForm.length; index++) {
-        const element = dateForm[index];
-        if (element === '/') {
-            numbers.push(number);
-            number = ''
-        } else if (index == dateForm.length - 1) {
-            number += element;
-            numbers.push(number); 
-        } else { 
-            number += element;  
-        }
-    }
-    return numbers
-}
-checkDate()
+// function convertToArray (dateForm) {
+//     const numbers = [];
+//     let number = '';
+//     for (let index = 0; index < dateForm.length; index++) {
+//         const element = dateForm[index];
+//         if (element === '/') {
+//             numbers.push(number);
+//             number = ''
+//         } else if (index == dateForm.length - 1) {
+//             number += element;
+//             numbers.push(number); 
+//         } else { 
+//             number += element;  
+//         }
+//     }
+//     return numbers
+// }
+// checkDate()
