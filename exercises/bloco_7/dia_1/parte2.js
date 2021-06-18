@@ -14,3 +14,15 @@ const fatorial = (number) => {
 const recursiveForm = (number) => (number === 0) ?  1 : number * recursiveForm(number-1);
 
 console.log(recursiveForm(6))
+
+// 2. Crie uma função que receba uma frase e retorne qual a maior palavra.
+
+// Exemplo:
+// longestWord("Antônio foi no banheiro e não sabemos o que aconteceu") // retorna 'aconteceu'
+
+const longestWord = (sentence) => {
+const words = sentence.split(' ').sort((a, b) => b.length - a.length)
+return words[0];
+}
+console.log(longestWord('hello my friends'));
+
