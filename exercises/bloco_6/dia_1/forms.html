@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
+        crossorigin="anonymous">
+    <link 
+        rel="stylesheet" 
+        href="styles.css">
+    <link 
+        rel="stylesheet" 
+        type="text/css" 
+        href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <title>Forms</title>
+</head>
+<body>
+    <h1 
+    class="display-3 text-center">
+    Cadastro de Currículo
+    </h1>
+    <form 
+        action="" 
+        method="GET" 
+        class="border border-dark container rounded">
+     <h4 
+        class="text-muted display-6 text-center">
+        Dados Pessoais
+    </h4>
+    <div class="mb-3">
+        <label 
+            for="input-name" 
+            class="form-label">
+            Nome
+        </label>
+        <input 
+            class='form-control' 
+            type="text" 
+            name="full-name" 
+            id="name" 
+            maxlength="40" 
+            required>
+    </div>
+        <div class="mb-3">
+            <label 
+                for="email" class="form-label">
+                Email
+            </label>
+            <input 
+                type="email" 
+                name="user-email" 
+                id="email" 
+                class='form-control'
+                required>
+        </div>
+        <!-- Numero Maximo Faltando -->
+        <div class="mb-3">
+            <label 
+                for="cpf-number" class="form-label">
+                CPF
+            </label>
+            <input 
+                type="text" 
+                name="cpf" 
+                id="cpf-number" 
+                maxlength="11" 
+                class='form-control'  
+                required>
+        </div>
+        <div class="mb-3">
+            <label 
+                for="user-adress" 
+                class="form-label">
+                Endereço
+            </label>
+            <input 
+                type="text" 
+                name="adress" 
+                id="user-adress" 
+                maxlength="200" 
+                class='form-control' 
+                required>
+        </div>
+        <div class="mb-3">
+            <label 
+                for="user-city" 
+                class="form-label">
+                Cidade
+            </label>
+            <input 
+                type="text" 
+                name="city" 
+                id="user-city" 
+                maxlength="28" 
+                class='form-control' 
+                required>
+        </div>
+        <div class="mb-3">
+            <label 
+                for="user-state" 
+                class="form-label">
+                Estado
+            </label>
+            <select 
+                class="form-select form-select-sm" 
+                name="state" 
+                id="user-state">
+            </select>
+        </div>
+        <div class="mb-3">
+            <h5 
+                class="form-label">
+                Tipo
+            </h5>
+            <div class="form-check">
+                <input 
+                    type="radio" 
+                    name="type" 
+                    id="house" 
+                    class="form-check-input">
+                <label 
+                    for="house" class="form-check-label">
+                    Casa
+                </label>
+            </div>
+            <div class="form-check">
+                <input 
+                    type="radio" 
+                    name="type" 
+                    id="apartment" 
+                    class="form-check-input">
+                <label 
+                    for="apartment" 
+                    class="form-check-label">
+                    Apartamento
+                </label>
+            </div>
+        </div>
+        <h4 
+            class="text-muted display-6 text-center">
+            Ultimo emprego
+        </h4>
+        <div class="mb-3">
+            <label 
+                for="resume" 
+                class="form-label" >
+                Resumo do currículo
+            </label>
+            <textarea 
+                name="resume" 
+                id="resume" 
+                required 
+                class="form-control">
+            </textarea>
+        </div>
+        <div class="mb-3">
+            <label 
+                class="form-label" 
+                for="office">
+                Cargo
+            </label>
+            <input 
+                class='form-control' 
+                type="text" 
+                name="cargo" 
+                id="office" 
+                maxlength="40" 
+                required>
+        </div>
+        <div class="mb-3">
+            <label 
+                class="form-label"  for="office-description">
+                Descrição do cargo
+            </label>
+            <textarea 
+                name="description" class='form-control' id="office-description" maxlength="500" 
+                required>
+            </textarea>
+        </div>
+        <div>
+            <label 
+                for="datepicker">
+                Data de inicio
+            </label>
+            <input 
+                type="text" 
+                id="datepicker">
+        <script 
+            src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js">
+        </script>
+        </div>
+        <button 
+            class="btn btn-success"
+            type="submit">
+            Enviar
+        </button>
+        <button 
+            class="btn btn-danger"
+            type="reset">
+            Limpar todos os campos
+        </button>
+    </form>
+    <script src="script.js"></script>
+    <script>
+    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+    </script>
+</body>
+</html>
