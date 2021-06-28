@@ -24,7 +24,7 @@ const books = [
   {
     id: 3,
     name: 'Fundação',
-    genre: 'Ficção Científica',
+    genre: '',
     author: {
       name: 'Isaac Asimov',
       birthYear: 1920,
@@ -82,3 +82,5 @@ const expectedResult = [
 }
   
 assert.deepStrictEqual(formatedBookNames(), expectedResult);
+
+module.exports = books;
