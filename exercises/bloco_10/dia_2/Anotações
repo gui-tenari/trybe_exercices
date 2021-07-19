@@ -1,0 +1,43 @@
+Callbacks - done como paraetro do teste e chamando em função no final do teste assincrono
+	test('description', done => { 
+	Function() => {
+	expect().toBe()}
+	})
+
+
+Promises - return a promise (utilizar o then quando pra o resolve e catch para reject
+	test('description', () => {
+	-Expect.assertions(N)
+	return Promise().then(() => { expect().toEqual})
+	});
+	
+	// expect.assertions(1);
+      return expect(getListAnimals('Dog')).resolves.toEqual(listDogs)
+	//
+	expect.assertions(1);
+      	return expect(getListAnimals('Lion')).rejects.toEqual({ error: 'Não 		possui esse tipo de animal.' })
+	//
+				
+async e await - utilizar o async e await nas funções de teste.
+
+	test('description', async () => {
+	const something = await *FUNCTION*
+	expect().toBe()
+	expect().toBe()
+	})
+	
+	test('Descriptions', async () => {
+  	try {
+    	await Fuinction('fail');
+  	} catch (error) {
+    	expect(error).toEqual('something')
+  	}
+	});
+	
+
+
+BeforeEach
+afterEach
+BeforeAll
+afterAll
+
