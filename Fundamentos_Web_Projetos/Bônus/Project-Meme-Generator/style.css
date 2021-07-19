@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+}
+
+#meme-image-container {
+    width: 350px;
+    height: 350px;
+    background-color: red;
+    margin-top: 200px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+
+#meme-image-container img {
+    width: 350px;
+    height: 350px;
+}
+#text {
+    position: absolute;
+    font-size: larger;
+    background-color: red;
+    /* width: auto; */
+}
