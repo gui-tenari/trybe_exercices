@@ -1,0 +1,40 @@
+MOCKS
+
+Mockar o comportamento de uma função, significa garantir o retorno dela
+Dentre as principais formas de se mockar algo em Jest, destacam-se três:
+
+jest.fn(); (utilizado para mockar uma função por vez;
+  service.randomRgbColor = jest.fn().mockReturnValue("rgb(255, 255, 255)");
+
+
+jest.mock(); (usado para mockar varias funções de uma vez;
+	jest.mock('./file');
+	mockImplementation(func)
+	//math.somar.mockImplementation((a, b) => a + b);
+  	math.somar(1, 2);
+	//
+
+jest.spyOn(); (espia" a chamada da função simulada, enquanto deixa a implementação original ativa.)
+
+	//  const mockSomar = jest.spyOn(módulo (onde ta), "somar"(nome da função));
+
+	mock.mockClear()
+		Útil quando você deseja limpar os dados de uso de uma simulação 			entre dois expect s;
+	mock.mockReset()
+		Faz o que o mockClear() faz;
+		Remove qualquer retorno estipulado ou implementação;
+		Útil quando você deseja resetar uma simulação para seu estado 		inicial;
+	mock.mockRestore()
+		Faz tudo que mockReset() faz;
+		Restaura a implementação original;
+		Útil para quando você quer simular funções em certos casos de 		teste e restaurar a implementação original em outros;
+
+
+Typs: 
+toHaveBeenCalledWith(...args)
+mockReturnValueOnce
+
+
+Require
+toHaveBeenCalled
+toHaveBeenCalledTimes(1)
