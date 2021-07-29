@@ -1,0 +1,16 @@
+body {
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form {
+  display: block;
+  width: 500px;
+  height: 700px;
+}
