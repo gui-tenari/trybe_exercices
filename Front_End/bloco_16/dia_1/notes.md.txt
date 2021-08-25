@@ -1,0 +1,91 @@
+#REDUX##
+
+> Store : onde se armazena os dados, onde interagimos
+	> store.dispatch() - dispacha action para Reducer
+	> store.getState() - recupera um estado; 
+> Actions (*intenções*) : objeto que representa uma mudança
+> Reducer: função que define como estado vai ser atualizado;
+
+* Criando Store:
+
+`/função que altera estado (vem como padrão undefined)/
+
+const ESTADO_INICIAL = {
+  login: false,
+  email: "",
+};
+
+const reducer = (state = ESTADO_INICIAL) => {
+return state;
+}; 
+
+const store = Redux.createStore(reducer);`
+
+* Acessando store:
+
+`console.log(store.getState());`
+
+	//{ login: false, email: '' }
+
+* Criando action :
+> propriedade *type*
+
+> /reducer recebe action como parametro (uma função com type)/
+ex: 
+`const fazerLogin = (email) => ({
+  type: "LOGIN",
+  email});`
+
+
+> /informamos ao reducer como reagir a cada tipo/
+ex:
+ `const reducer = (state = ESTADO_INICIAL, action) => {
+  switch (action.type) {
+    case "LOGIN":
+      return {
+        ...state, */retorna todo o estado/*
+        login: !state.login,
+        email: action.email,
+      };
+    default: return state;
+  }
+};`
+
+> Então para alterar o estado usamos o dispatch com a action:
+ex:
+`store.dispatch(fazerLogin("alguem@email.com"));
+console.log(store.getState());`
+	// { login: true, email: 'alguem@email.com' }
+
+> Trabalhando com diversos Reducers
+
+> ultilizando a função *combineReducers(obj)* passando um objeto com todos os
+reducers que deseja mesclar, criar um store com utilizando o reducer mesclado
+como parametro
+
+`
+import { createStore } from 'redux';
+import { combineReducers } from 'redux';
+import meuReducer from './meuReducer';
+import meuOutroReducer from './meuOutroReducer';
+
+const reducerCombinado = combineReducers({
+meuReducer,
+meuOutroReducer});
+
+const store = createStore(reducerCombinado);`
+
+ *SUBSCRIBE*
+> listener dispara uma callback quando uma action for despachada.
+
+`const store = createStore(reducerCombinado);
+
+store.subscribe(() => {
+  console.log(store.getState());
+});`
+ 
+
+
+
+
+
