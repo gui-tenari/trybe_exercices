@@ -1,0 +1,17 @@
+# React Redux #
+ > instalando
+`npm install --save redux react-redux`
+
+> ligando Redux com React
+
+<Provider store= {store} />
+
+no componente que precisa acessar o state
+
+const mapStateToProps = (state) =>({
+	categories: state.nomeDoReduce.nomeDaChave;
+})
+
+
+import {connect} from 'react-redux'
+`export default connect (mapStateToProps, mapDispatchToProps)`
