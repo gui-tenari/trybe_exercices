@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box
+}
+
+.pokedex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: black;
+
+}
+
+
+.card {
+  display: flex;
+  background-color: red;
+  height: 100px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card .info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  height: 100px;
+  width: 100px;
+}
